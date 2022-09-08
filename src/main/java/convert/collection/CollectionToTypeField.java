@@ -13,20 +13,23 @@ public class CollectionToTypeField implements ConvertToTypeField {
 
     @Override
     public Object convert(Field field, Object objectFromJSON) {
-        verificarSeTiposDosAtributosDoFieldSaoIguaisAosDoJSON(field, objectFromJSON);
+        verificarSeTiposDosAtributosDoFieldCorrespondemAosDoJSON(field, objectFromJSON);
         ObjectToCollection<?> convertObjectToCollection = null;
 
         if (field.getType().equals(List.class)) {
             convertObjectToCollection = new ConvertObjectToList();
         }
         else if (field.getType().equals(Set.class)) {
-
+            convertObjectToCollection = new ConvertObjectToSet();
         }
+
+        if (Objects.isNull(convertObjectToCollection))
+            throw new NullPointerException("Conversão para Collection não implementada!");
 
         return convertObjectToCollection.convert(objectFromJSON);
     }
 
-    private void verificarSeTiposDosAtributosDoFieldSaoIguaisAosDoJSON(Field field, Object objectFromJSON) {
+    private void verificarSeTiposDosAtributosDoFieldCorrespondemAosDoJSON(Field field, Object objectFromJSON) {
         ParameterizedType parameterizedTypeField = (ParameterizedType) field.getGenericType();
         Type genericTypeList = parameterizedTypeField.getActualTypeArguments()[0];
         JSONArray jsonArray = ((JSONArray) objectFromJSON);

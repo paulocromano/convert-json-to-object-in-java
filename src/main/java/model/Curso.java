@@ -6,7 +6,7 @@ import lombok.ToString;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @ToString
@@ -17,5 +17,5 @@ public class Curso {
     private LocalDate dataInicio;
     private LocalTime horaInicio;
     private LocalDateTime dataHoraFim;
-    private List<Aluno> alunos;
+    private Set<Aluno> alunos;
 }
