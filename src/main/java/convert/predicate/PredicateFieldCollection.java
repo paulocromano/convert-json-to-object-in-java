@@ -4,7 +4,6 @@ import convert.ConvertToTypeField;
 import convert.collection.CollectionToTypeField;
 
 import java.lang.reflect.Field;
-import java.time.temporal.Temporal;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.function.Predicate;
