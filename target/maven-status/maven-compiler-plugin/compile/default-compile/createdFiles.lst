@@ -1,0 +1,12 @@
+convert\temporal\ConvertObjectToLocalDate.class
+convert\temporal\ConvertObjectToTemporal.class
+convert\ConvertObjectFromJSON.class
+convert\predicate\PredicateFieldFromJSON.class
+model\Curso.class
+convert\ConvertJSONToObject.class
+convert\predicate\PredicateFieldTemporal.class
+convert\temporal\ObjectToTemporal.class
+convert\temporal\ConvertObjectToLocalTime.class
+JSONToObjectApplication.class
+convert\temporal\ConvertObjectToLocalDateTime.class
+convert\ConvertToTypeField.class
