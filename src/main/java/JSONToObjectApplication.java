@@ -11,7 +11,7 @@ public class JSONToObjectApplication {
         JSONObject jsonCurso = new JSONObject();
 
         JSONArray AlunosDoCurso = new JSONArray()
-            .put(new JSONObject().put("id", "A").put("nome", "Paula"))
+            .put(new JSONObject().put("id", 1L).put("nome", "Paula"))
             .put(new JSONObject().put("id", 2L).put("nome", "Julia"));
 
 
